@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SecondEvaluation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_no_of_apple">Enter No of Apple</string>
+    <string name="enter_price_apple">Enter Price/apple</string>
+    <string name="enter_discount">Enter Discount</string>
+</resources>
