@@ -2,58 +2,37 @@ package com.nipun.fragmentevaluation.Fragment;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.nipun.fragmentevaluation.FragmentCommunicationListener;
 import com.nipun.fragmentevaluation.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link EventConfirmationFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class EventConfirmationFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public EventConfirmationFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment EventConfirmationFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static EventConfirmationFragment newInstance(String param1, String param2) {
-        EventConfirmationFragment fragment = new EventConfirmationFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+    private FragmentCommunicationListener listener;
+    private TextView tvName;
+    private TextView tvTime;
+    private TextView tvDate;
+    private TextView tvaddress;
+    private TextView tvphone;
+    private String name;
+    private String time;
+    private String date;
+    private String address;
+    private String phone;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
@@ -62,5 +41,42 @@ public class EventConfirmationFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_event_confirmation, container, false);
+    }
+
+
+    @Override
+    public void onViewCreated(@NonNull  View view, @Nullable  Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initView(view);
+        getDataFromEventDetailsFragment();
+        tvName.setText(name);
+        tvTime.setText(time);
+        tvDate.setText(date);
+        tvphone.setText(phone);
+        tvaddress.setText(address);
+    }
+
+    private void getDataFromEventDetailsFragment() {
+        if (getArguments() != null) {
+            name = getArguments().getString("name");
+            time = getArguments().getString("time");
+            date = getArguments().getString("date");
+            address = getArguments().getString("address");
+            phone = getArguments().getString("phone");
+
+        }
+    }
+
+    private void initView(View view) {
+        tvName = view.findViewById(R.id.tvName1);
+        tvTime = view.findViewById(R.id.tvtime1);
+        tvDate = view.findViewById(R.id.tvdate1);
+        tvaddress = view.findViewById(R.id.tvaddress1);
+        tvphone = view.findViewById(R.id.tvphone1);
+
+    }
+
+    public void setListenerThird(FragmentCommunicationListener listener) {
+        this.listener = listener;
     }
 }

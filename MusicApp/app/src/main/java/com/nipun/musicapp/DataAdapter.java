@@ -1,4 +1,4 @@
-package com.nipun.evaluation5;
+package com.nipun.musicapp;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,9 +9,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
 
+
+
 public class DataAdapter extends RecyclerView.Adapter<DataViewHolder> {
     OnClickListner onClickListner;
-    Response  responseList;
+    Response responseList;
     public DataAdapter(Response responseList , OnClickListner onClickListner){
         this.onClickListner = onClickListner;
         this.responseList = responseList;

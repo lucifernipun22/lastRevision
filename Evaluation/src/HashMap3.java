@@ -13,13 +13,13 @@ public class HashMap3 {
         map.put("Prateek",1299349898);
 
 //Print the value whose key length>5
-       /* for(Iterator<Map.Entry<String ,Integer>> it = map.entrySet().iterator(); it.hasNext();){
+        for(Iterator<Map.Entry<String ,Integer>> it = map.entrySet().iterator(); it.hasNext();){
             Map.Entry<String ,Integer> entry = it.next();
             if(entry.getKey().length()>5){
                 System.out.println(entry.getKey());
             }
 
-        }*/
+        }
 
 
         /*map.entrySet().removeIf(entry -> entry.getKey().length()>=6);

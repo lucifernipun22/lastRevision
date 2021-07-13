@@ -5,10 +5,39 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.EventConfirmationFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
+        android:id="@+id/tvName1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"/>
+    <TextView
+        android:id="@+id/tvtime1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"/>
+    <TextView
+        android:id="@+id/tvdate1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"/>
+    <TextView
+        android:id="@+id/tvphone1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="phone"/>
+    <TextView
+        android:id="@+id/tvaddress1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="address"/>
 </FrameLayout>

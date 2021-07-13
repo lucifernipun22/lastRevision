@@ -1,4 +1,4 @@
-package com.nipun.evaluation5;
+package com.nipun.musicapp;
 
 public interface OnClickListner {
     void playMusic(int pos, Result result);
